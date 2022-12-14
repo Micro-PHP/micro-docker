@@ -1,21 +1,21 @@
 # Build Options
 
-## Selecting a Specific Symfony Version
+## Selecting a Specific Micro Framework Version
 
-Use the `SYMFONY_VERSION` environment variable to select a specific Symfony version.
+Use the `MICRO_VERSION` environment variable to select a specific Micro version.
 
-For instance, use the following command to install Symfony 5.4:
+For instance, use the following command to install Micro ^1:
 
 On Linux:
 
-    SYMFONY_VERSION=5.4.* make start
+    MICRO_VERSION=^1 make start
 
-## Installing Development Versions of Symfony
+## Installing Development Versions of Micro
 
-To install a non-stable version of Symfony, use the `STABILITY` environment variable during the build.
+To install a non-stable version of Micro, use the `STABILITY` environment variable during the build.
 The value must be [a valid Composer stability option](https://getcomposer.org/doc/04-schema.md#minimum-stability)) .
 
-For instance, use the following command to use the development branch of Symfony:
+For instance, use the following command to use the development branch of Micro:
 
 On Linux:
 

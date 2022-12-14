@@ -1,7 +1,7 @@
 # Deploying in Production
 
-Symfony Docker provides Docker images, and a Docker Compose definition optimized for production usage.
-In this tutorial, we will learn how to deploy our Symfony application on a single server using Docker Compose.
+Micro Docker provides Docker images, and a Docker Compose definition optimized for production usage.
+In this tutorial, we will learn how to deploy our Micro application on a single server using Docker Compose.
 
 ## Preparing a Server
 
@@ -15,7 +15,7 @@ This will provision an Ubuntu server with the latest versions of Docker and Dock
 
 To test, the cheapest plan will be enough, but for real production usage you'll probably want to pick a plan in the "general purpose" section that will fit your needs.
 
-![Deploying a Symfony app on DigitalOcean with Docker Compose](digitalocean-droplet.png)
+![Deploying a Micro app on DigitalOcean with Docker Compose](digitalocean-droplet.png)
 
 You can keep the defaults for other settings, or tweak them according to your needs.
 Don't forget to add your SSH key or to create a password then press the "Finalize and create" button.
@@ -45,7 +45,7 @@ Example in Gandi's UI:
 
 ![Creating a DNS record at Gandi.net](gandi-dns.png)
 
-Note: Let's Encrypt, the service used by default by Symfony Docker to automatically generate a TLS certificate doesn't support using bare IP addresses.
+Note: Let's Encrypt, the service used by default by Micro Docker to automatically generate a TLS certificate doesn't support using bare IP addresses.
 Using a domain name is mandatory to use Let's Encrypt.
 
 ## Deploying

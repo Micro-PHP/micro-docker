@@ -11,8 +11,8 @@ FROM php:8.2-fpm-alpine AS app_php
 ARG STABILITY="stable"
 ENV STABILITY ${STABILITY}
 
-# Allow to select Symfony version
-ARG MICRO_VERSION=""
+# Allow to select Micro version
+ARG MICRO_VERSION="^1"
 ENV MICRO_VERSION ${MICRO_VERSION}
 
 ENV APP_ENV=prod
@@ -80,10 +80,10 @@ COPY --link  . .
 RUN rm -Rf docker/
 
 RUN set -eux; \
-	mkdir -p var/cache var/log; \
+	#mkdir -p var/cache var/log; \
     if [ -f composer.json ]; then \
 		composer dump-autoload --classmap-authoritative --no-dev; \
-		composer dump-env prod; \
+#		composer dump-env prod; \
 		composer run-script --no-dev post-install-cmd; \
 		chmod +x bin/console; sync; \
     fi

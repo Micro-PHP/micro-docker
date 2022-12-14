@@ -15,6 +15,9 @@ help:
 build: ## Pull and make docker images and compile application components
 	@$(DOCKER_COMP) build --pull --no-cache
 
+test: ## Run all tests from `phpunit.xml`
+	@$(PHP_CONT) php vendor/bin/phpunit --verbose
+
 up: ## Run made application
 	@$(DOCKER_COMP) up --detach
 
