@@ -9,6 +9,7 @@ fi
 if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 	# Install the project the first time PHP is started
 	# After the installation, the following block can be deleted
+	rm -Rf tmp/
 	if [ ! -f composer.json ]; then
 		CREATION=1
 		composer create-project "micro/micro $MICRO_VERSION" tmp --stability="$STABILITY" --prefer-dist --no-progress --no-interaction --no-install
